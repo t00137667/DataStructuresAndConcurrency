@@ -69,4 +69,50 @@ public class CP3LinkedList<E> {
 
 		//}
 	}
+
+	public static int fiboIterative(int n){
+		int f = 0;
+
+		int fPrevious = 1, fTwoPrevious = 0;
+
+		if (n == 0){
+			return 0;
+		}
+		else if (n == 1) {
+			return 1;
+		}
+		for (int i = 2; i < n; i++){
+
+
+			f = fPrevious + fTwoPrevious;
+
+			fTwoPrevious = fPrevious;
+			fPrevious = f;
+
+		}
+		System.out.println(f);
+		return f;
+	}
+	public static void fiboRecursive(){
+		//fiboRecursive(0,0);
+	}
+
+	public static int fiboRecursive(int n){
+
+		int f=0;
+		if (n == 0){
+			return 0;
+		}
+		else if (n == 1){
+			return 1;
+		}else{
+			f = fiboRecursive(n-1) + fiboRecursive(n-2);
+		}
+
+		System.out.println(f);
+		return f;
+		// Call itself down to n=1, return 1, reconstruct, adding itself and its call, and returning.
+
+
+	}
 }

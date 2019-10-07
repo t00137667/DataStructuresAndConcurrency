@@ -26,4 +26,17 @@ class CP3LinkedListTest {
 
         list.print();
     }
+
+    @Test
+    void fiboIterative(){
+        int actual = CP3LinkedList.fiboIterative(10);
+        int expected = 34;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void fiboRecursive(){
+        CP3LinkedList.fiboRecursive(10);
+    }
 }
